@@ -25,7 +25,9 @@ const displayMeals = meals => {
                               <h4 class="fw-bold">${meal.strMeal}</h4>
                                   <p class="fs-5">Category: ${meal.strCategory}</p>
                                   <p class="fs-5">Tags: ${meal.strTags}</p>
-                                  <button class="btn btn-warning">View Details</button>
+                                  <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    View Details
+  </button>
                             </div>
                           </div>
                         </div>
@@ -41,6 +43,29 @@ const serachMeals = () => {
     const searchText = document.getElementById('seach-Field').value;
     console.log(searchText);
     loadMeals(searchText);
+}
+
+const loadmodaletails = async(idMeal) => {
+    const url = `
+    https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}
+    `
+    try{
+        const res = await fetch(url);
+        const data = await res.json();
+        didplaymodaletails(data);
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+
+const didplaymodaletails = meal => {
+    console.log(meal)
+    document.getElementById('modaletailsLabel').innerText = meal.meals[0].strMeal;
+    const modaletails = document.getElementById('modaletailsContainer');
+    modaletails.innerHTML = `
+    <h1>Name: ${meal.idMeal}</h1>
+    `
 }
 
 loadMeals('fish')
