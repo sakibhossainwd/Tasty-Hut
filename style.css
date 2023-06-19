@@ -31,6 +31,7 @@ ul {
 .footer-section {
   background: #151414;
   position: relative;
+  border-radius: 5px;
 }
 .footer-cta {
   border-bottom: 1px solid #373636;
