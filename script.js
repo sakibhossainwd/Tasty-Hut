@@ -63,7 +63,7 @@ const displayMealsDetails = meal => {
     <h4>ID: ${meal.meals[0].idMeal}</h4> </br>
         <h4>Category: ${meal.meals[0].strCategory}</h4> </br>
         <img src="${meal.meals[0].strMealThumb}" class="card-img-top img-fluid">
-        <a class="btn btn-danger mt-2" href="${meal.meals[0].strYoutube}" target="_blank">Youtube: </a>
+        <a class="btn btn-danger mt-2" href="${meal.meals[0].strYoutube}" target="_blank">Youtube</a>
     `
 }
 
