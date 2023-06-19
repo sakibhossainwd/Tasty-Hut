@@ -1,22 +1,15 @@
-.cover-img{
-    height: 100vw;
-    height: 100vh;
+.cover img {
+    width: 100vw;
+    height: 70vh;
     object-fit: cover;
     filter: brightness(.4);
-    position: relative;
-}
-.cover-content {
+  }
+
+.content {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -150%);
+    transform: translate(-50%, -70%);
     color: #fff;
     text-align: center;
-    margin-top: 10%;
-}
-.cover-content h1{
-    font-size: 4vw;
-}
-.cover-content p{
-    font-size: 1vw;
-}
+  }
