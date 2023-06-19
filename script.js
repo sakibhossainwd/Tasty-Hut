@@ -1,13 +1,16 @@
-const loadMeals = () => {
-    fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=fish')
+const loadMeals = (searchText) => {
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`;
+    console.log(url);
+    fetch(url)
     .then(res => res.json())
     .then(data => displayMeals(data.meals))
 };
 
 const displayMeals = meals => {
-   const mealsContainer = document.getElementById('mealsContainer')
+   const mealsContainer = document.getElementById('mealsContainer');
+   mealsContainer.innerHTML = '';
    meals.forEach( meal => {
-    console.log(meal.strTags);
+    // console.log(meal.strTags);
     const div = document.createElement('div');
     div.classList.add('col');
     div.innerHTML = `
@@ -22,7 +25,7 @@ const displayMeals = meals => {
                               <h4 class="fw-bold">${meal.strMeal}</h4>
                                   <p class="fs-5">Category: ${meal.strCategory}</p>
                                   <p class="fs-5">Tags: ${meal.strTags}</p>
-                                  <h4 class="fs-5 fw-bold text-primary">View Details</h4>
+                                  <button class="btn btn-warning">View Details</button>
                             </div>
                           </div>
                         </div>
@@ -34,4 +37,10 @@ const displayMeals = meals => {
    })
 }
 
-loadMeals()
+const serachMeals = () => {
+    const searchText = document.getElementById('seach-Field').value;
+    console.log(searchText);
+    loadMeals(searchText);
+}
+
+loadMeals('fish')
