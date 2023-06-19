@@ -8,32 +8,66 @@
     <link rel="stylesheet" href="style.css">
     <!-- fonstAwsome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 
   </head>
-  <body class="w-75 m-auto bg-black">
+  <body class="w-75 m-auto">
+<!-- MenuBar part -->
     <header>
-        <div class="menu-ber d-flex justify-content-between bg-light text-black p-4">
+        <div class="menu-ber d-flex justify-content-between bg-light text-black py-3 px-5">
             <div class="logo">
-                <img src="./images/Tasty_HUT.png" alt="">
+                <img class="mt-2" src="./images/Tasty_HUT.png" alt="">
             </div>
             <div class="blog">
-                <button class=" btn btn-primary">Blog</button>
+                <button class=" btn btn-warning">Blog</button>
             </div>
         </div>
     </header>
-    <!-- cover part -->
+<!-- cover part -->
     <section>
         <div class="cover">
             <img class="img-fluid" src="./images/banner_1.png" alt="Placeholder-Image">
-            <div class="content w-50">
-                <h1 class="display-2 fw-bolder">Tate Our Delicious Best Foods</h1>
+            <div class="content">
+                <h1 class="fw-bolder">Tate Our Delicious Best Foods</h1>
                 <p class="w-75 m-auto mb-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou.</p>
                 <div class="search-box">
-                    <input class="px-2 py-1 pe-5 w-50 rounded" type="text" placeholder="&#xF002; Search" style="font-family:Arial, FontAwesome" />
-                    <button class="btn btn-danger px-4">Search</button>
+                    <input class="py-2 ps-3 pe-5 w-50 rounded" type="text" placeholder="&#xF002; Search" style="font-family:Arial, FontAwesome" />
+                    <button class="btn btn-warning px-4 py-2">Search</button>
                 </div>
         </div>
     </section>
+<!-- Food items part -->
+<section class="mt-5">
+    <div class="food-item-header">
+        <h1 class="text-center fw-bold">Your Favourite Food</h1>
+    </div>
+    <div class="food-items mt-5">
+            <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 g-4">
+              <!-- food-01-->
+                <div class="col">
+                    <div class="card" style="max-width:auto;">
+                        <div class="row g-0">
+                          <div class=" col-sm-12 col-md-4 col-lg-4">
+                            <img src="./images/kw92t41604181871.jpg" class=" card-img-top rounded-start" alt="...">
+                          </div>
+                          <div class="col-sm-12 col-md-8 col-lg-8 d-flex align-items-center">
+                            <div class="card-body">
+                              <h4 class="fw-bold">Chicken Handi</h4>
+                                  <p class="fs-5">There are many variations of passages of available, but the majority have suffered</p>
+                                  <h4 class="fs-5 fw-bold text-primary">View Details</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</section>
+
 
 
     <!-- scripy file -->
